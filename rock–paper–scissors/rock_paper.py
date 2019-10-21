@@ -39,12 +39,17 @@ def battle():
 playerwins = 0
 machinewins = 0
 def results(playerwins,machinewins):
-        print(f'\nPlayer: {playerwins}  /  Machine: {machinewins}')
+        print(f'\n{name}: {playerwins}  /  Computer: {machinewins}')
 
 #Game Starts!        
 print('\n'*100)
 print('Welcome to the Rock Paper Scissors game!')
-name = input('What is your name? ' )
+
+name=False
+while not name: 
+    name = input('What is your name?' )
+
+
 
 while True:
     try:
@@ -80,8 +85,9 @@ while i<=max_games:
         results(playerwins,machinewins)
 
 if playerwins>machinewins:
-    print('\n\nYou Win! :)')
+    print('\n\nYou WIN! :)')
 elif playerwins<machinewins:
-    print('\n\nMACHINE WINS! :(')
+    print('\n\nComputer WINS! :(')
 else:
     print('\n\nDraw Game')
+
